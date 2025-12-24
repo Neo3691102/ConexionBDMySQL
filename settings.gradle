@@ -15,4 +15,5 @@ rootProject.name = 'ConexionBDMySQL'
 
 
 include 'aplicacion'
+include 'conexion'
 
