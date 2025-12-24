@@ -1,0 +1,14 @@
+plugins{
+    id 'pluginversion'
+    id 'application'
+}
+
+project.pluginManager.apply('application')
+
+project.tasks.named('jar') {
+    manifest {
+        attributes(
+                'Main-Class': project.application.mainClass
+        )
+    }
+}

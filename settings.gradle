@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories{
+        gradlePluginPortal()
+    }
+    includeBuild('gradle/plugins')
+}
+
+dependencyResolutionManagement {
+    repositories{
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'ConexionBDMySQL'
+
+
+include 'aplicacion'
+

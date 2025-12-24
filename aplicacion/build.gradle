@@ -1,0 +1,32 @@
+plugins{
+    id 'pluginapp'
+}
+
+application {
+    mainClass = 'aplicacion.Library'
+}
+
+dependencies{
+    //capas
+    //implementation project(':capanegocio')
+    //implementation project(':capadatos')
+
+}
+
+jar {
+    dependsOn configurations.runtimeClasspath
+
+    manifest {
+        attributes(
+                'Main-Class': application.mainClass
+        )
+    }
+
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
