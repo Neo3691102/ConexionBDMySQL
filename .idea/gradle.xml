@@ -3,13 +3,27 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/gradle/plugins" name="plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/gradle/plugins" />
+                  <project path="$PROJECT_DIR$/gradle/plugins/java-plugins" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/Desktop/gradle-9.2.1-bin/gradle-9.2.1" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/src" />
+            <option value="$PROJECT_DIR$/aplicacion" />
+            <option value="$PROJECT_DIR$/gradle/plugins" />
+            <option value="$PROJECT_DIR$/gradle/plugins/java-plugins" />
           </set>
         </option>
       </GradleProjectSettings>
